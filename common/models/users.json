@@ -1,0 +1,53 @@
+{
+  "name": "users",
+  "plural": "users",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+
+    "email": {
+      "type": "string",
+      "required": true,
+      "mysql": {
+        "columnName": "email",
+        "dataType": "VARCHAR2"
+      }
+    },
+    "Username": {
+      "type": "string",
+      "required": true,
+      "mysql": {
+        "columnName": "user_name",
+        "dataType": "VARCHAR2"
+      }
+    },
+    "password": {
+      "type": "string",
+      "required": true,
+      "mysql": {
+        "columnName": "password",
+        "dataType": "VARCHAR2"
+      }
+    },
+    "role": {
+      "type": "string",
+      "required": true,
+      "mysql": {
+        "columnName": "role",
+        "dataType": "VARCHAR2"
+
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+
+  },
+  "acls": [
+
+  ],
+  "methods": {}
+}

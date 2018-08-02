@@ -1,0 +1,22 @@
+<body>
+  <div ng-app="app" ng-init="manageusers()"ng-controller="manageusersController" >
+<center><h1>Users</h1></center>
+      <table  border="3%"style= width="10%"></center>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Username</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="data in userdata.status">
+            <td> {{data.role}}</td>
+            <td>{{data.Username}}</td>
+            <td>{{data.email}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+</body>

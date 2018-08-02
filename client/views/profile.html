@@ -1,0 +1,17 @@
+<body>
+	<div ng-app="app" ng-init="profile()"ng-controller="profileController">
+		<center>
+			<table border="3%"style= width="10%"></center>
+				<h1>UserProfile</h1>
+					<tr>
+						<th>Role</th>
+						<th>Username</th>
+						<th>Email</th>
+					</tr>
+					<tr ng-repeat="detail in userdetail.status">
+						<td>{{detail.role}}</td>
+						<td>{{detail.Username}}</td>
+						<td>{{detail.email}}</td>
+					</tr>
+				</table>
+			</body>

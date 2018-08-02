@@ -1,0 +1,55 @@
+<body backgroundcolor="#eab9b9">
+<center> <h2> SignUp </h2></center>
+  <div class="background">
+    <form name="form" class="form-signup" ng-submit="signup(data)" novalidate>
+      <div class="row">
+    <div class = "col-lg-12">
+        <div class = "col-lg-6">
+          <div class="form-group text-marg" ng-class="{ 'has-error' : data.password.$invalid && !data.password.$pristine }">
+            <input type="name"id="Username" placeholder="Username" ng-model="data.Username" name='uname' required />
+           <div>
+            <span ng-show="default && form.uname.$error.required" style=color:red>Username Required.</span>
+          </div>
+          </div>
+        </div>
+        <div class = "col-lg-6">
+          <div class="form-group text-marg" ng-class="{ 'has-error' : data.email.$invalid && !data.email.$pristine }">
+            <input type="email" id="email" placeholder="Email" ng-model="data.email" name='uemail' required />
+            <div>
+            <span ng-show="default && form.uemail.$error.required" style=color:red >Email Required.</span>
+            <span ng-show="default && form.uemail.$error.email" style=color:red>Invalid Email</span>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class = "col-lg-12">
+          <div class = "col-lg-6">
+            <div class="form-group text-marg" ng-class="{ 'has-error' : data.password.$invalid && !data.password.$pristine }">
+              <input type="password"id="Password" placeholder="Password" ng-model="data.password" name='upassword' required />
+            <div>
+              <span ng-show="default && form.upassword.$error.required" style=color:red> Password Required.</span>
+            </div>
+          </div>
+          </div>
+          <div class = "col-lg-6">
+            <div class="form-group text-marg" ng-class="{ 'has-error' : data.role.$invalid && !data.role.$pristine }">
+              <!-- <select class="names">
+                  <option>student</option>
+                  <option>teacher</option>
+                </select> -->
+
+            <input type="name" id="role" placeholder="Role" ng-model="data.role" name='urole' required />
+            <div>
+            <span ng-show="default && form.urole.$error.required" style=color:red > Role Required.</span>
+          </div>
+          </div>
+          </div>
+        </div>
+        <div class = "col-lg-12 text-center">
+          <button type="submit" class="btn btn-success">Signup</button>
+      </div>
+      </div>
+    </form>
+    </div>
+  </body>
