@@ -1,0 +1,14 @@
+<body>
+  <div ng-app="app" ng-init="getusers()" ng-controller="getusersController">
+  <p> accessToken is valid{{getusers}} </p>
+  <table  border="1"style= width="100%" >
+    <th>Role</th>
+    <th>Username</th>
+    <th>email</th>
+  <tr ng-repeat="x in list">
+    <td>{{x.role }}</td>
+    <td>{{x.Username}}</td>
+    <td>{{x.email}}</td>
+    </tr>
+</table>
+</body>

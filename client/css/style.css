@@ -1,105 +1,254 @@
-/*global*/
-* {
-  margin:0;
-  padding:0;
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+
+}
+.card-container.card {
+    max-width: 350px;
+    padding: 80px 40px;
+}
+.btn {
+    font-weight: 700;
+    height: 36px;
+    cursor: pointer;
+}
+.card {
+    background-color:white;
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    border-radius: 1px;
+    box-shadow: 0px 0px 2px 2px rgba(0.3, 0.3, 0.3, 0.3)
+}
+.form-signin #inputUsername,
+.form-signin #inputpassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+    outline:none;
+    margin-top:5px;
+}
+
+.form-signin input[type=Username],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.signupbtn:hover {
+  background-color: #45a049;
+  margin-right:10px;
+}
+.signin-button:focus {
+  color: blue;
+}
+.signin-button {
+  background-color: lightgreen;
+  padding: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  height: 36px;
+  margin-top:97px;
+  cursor:pointer;
+}
+.clicktosignup {
+    color: rgb(104, 145, 162);
+    margin-top:15px;
+    cursor:pointer;
+}
+#inputUsername {
+border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+#inputpassword {
+border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+
 }
 body {
-  font-family:'courier new';
-  font-size:1rem;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 50px;
+  background-color: #e0a3a3;
+
 }
-button {
-  background:#eee;
-  border:0;
-  color:#777;
-  cursor:pointer;
-  font-family:'courier new';
-  font-size:1rem;
-  padding:.5rem;
+.background {
+  background-color:white;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  max-width: 500px;
+  height: 400px;
+  margin: auto;
+  margin-top:40px;
+  margin-bottom:40px;
 }
-button:active {
-  background:#ddd;
+
+input[type=text] {
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 0px;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  border-width:50px;
 }
-[disabled] {
-  background:#eee;
-  color:#ccc;
+.signupbtn {
+  background-color: lightgreen;
 }
-fieldset {
-  color:#777;
-  padding:1rem;
+.btn-success {
+    margin-top: 60px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
 }
-fieldset legend {
-  border:1px solid #777;
-  padding:0 .5rem;
+.signupbtn:hover {
+  background-color: #45a049;
+  margin-right:10px;
 }
-label {
-  display:inline-block;
-  text-align:right;
-  vertical-align:middle;
-  width:200px;
+.text-marg {
+margin: 65px 0px 20px 0px;
 }
-select {
-  background:#ddd;
-  text-indent: 0.01px;
-  text-overflow: "";
+.text{
+margin-bottom:60px;
 }
-p {
-  padding:1rem;
+#Username{
+border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  display:flex;
 }
-/*header*/
-body > header {
-  border-bottom:1px solid #ccc;
+#Password{
+border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
 }
-body > header h1 {
-  font-size:2rem;
-  padding:1rem 1rem 0 1rem;
+#email{
+border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+
 }
-body > header h2 {
-  font-size:1rem;
-  padding:0 1rem;
+#role{
+border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+
 }
-/*nav*/
-body > header nav {
-  padding:1rem;
+input[placeholder]{
+width:500;
+font-size: 17px;
 }
-body > header nav li {
-  display:inline-block;
-  padding-bottom:.5rem;
+
+
+.sidenav {
+    height: 100%;
+    width: 171px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 20px;
+    font-size:10px;
 }
-body > header nav li a {
-  color:#777;
-  padding:.5rem;
-  text-decoration:none;
+
+.sidenav a {
+    padding: 21px 8px 7px 6px;
+    text-decoration: none;
+    font-size: 20px;
+    color:white;
+    display: block;
 }
-body > header nav li a.active {
-  background:#eee;
+
+.sidenav a:hover {
+    color: white;
 }
-/*main*/
-main section {
-  padding:1rem;
+
+.topnav {
+  overflow: hidden;
+  background-color: lightblue;
+  margin-right: -113px;
+  margin-left: 23px;
+  margin-top: -49px;
+  text-align: right;
 }
-main section article {
-  padding-bottom:2rem;
+
+.topnav a {
+  float: left;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 19px;
+  text-align: right;
 }
-main section article h1 {
-  font-size:1.5rem;
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+  text-align: right;
+
 }
-main section article h2 {
-  font-size:1rem;
-  margin-bottom:1rem;
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: blue;
 }
-/*main form*/
-main input,
-select,
-textarea {
-  background:#ddd;
-  border:0;
-  display:inline-block;
-  font-family:'courier new';
-  margin-bottom:1rem;
-  padding:.5rem;
-  vertical-align:middle;
+.logout{
+  float: right;
+  color:black;
 }
-main select,
-textarea {
-  width:300px;
+#right-content{
+  display:table;
+}
+
+.ng-scope {
+  border-spacing: 0;
+}
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 1px
+  table-layout: fixed;
+  width: 600px;
+  margin-left: 295px;
+  margin-top:85px;
+}
+.main {
+    margin-left: 200px;
+  }
+h1{
+    margin-top:27px;
+    margin-left: 200px;
+    font-size:28px;
+  }
+
+
+
+.main {
+    margin-left: 200px;
+    font-size: 28px;
+    padding: 0px 10px;
+    background-color: lightblue;
+}
+.container {
+color= blue;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }

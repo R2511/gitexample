@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="card card-container">
+    <form name= "form" class="form-signin" ng-submit="signin(value)" novalidate>
+      <div class="form-group text col-lg-12" ng-class="{ 'has-error' : value.username.$invalid && !value.username.$pristine }">
+        <input type="text" id="inputUsername" placeholder="Username" ng-model="value.Username" name='uname' required />
+        <div style="position:absolute">
+        <span ng-show="default && form.uname.$error.required" style=color:red> UsernameRequired.</span>
+      </div>
+      </div>
+      <div class="form-group text col-lg-12" style="margin-bottom:35px;" ng-class="{ 'has-error' : value.password.$invalid && !value.password.$pristine }">
+        <input type="password" id="inputpassword"  placeholder="Password" ng-model="value.password" name='upassword' required />
+        <div style="position:absolute;">
+        <span ng-show="default && form.upassword.$error.required" style=color:red> passwordRequired.</span>
+      </div>
+    </div>
+      <button class="signin-button" type="submit">Sign in</button>
+      <center> <a  href ng-click="click()" class="clicktosignup">Click to signup</center></a>
+    </div>
+  </form>
+  </div>

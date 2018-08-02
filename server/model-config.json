@@ -13,10 +13,8 @@
       "./mixins"
     ]
   },
-  "User": {
-    "dataSource": "db"
-  },
-  "AccessToken": {
+  
+  "accessToken": {
     "dataSource": "db",
     "public": false
   },
@@ -32,16 +30,20 @@
     "dataSource": "db",
     "public": false
   },
-  "CoffeeShop": {
-    "dataSource": "mysqlDs",
+    "student": {
+    "dataSource": "db",
     "public": true
   },
-  "Review": {
-    "dataSource": "mongoDs",
+  "users": {
+    "dataSource": "db",
     "public": true
   },
-  "Reviewer": {
-    "dataSource": "mongoDs",
+  "studentdetails": {
+    "dataSource": "db",
+    "public": true
+  },
+  "studentmarks": {
+    "dataSource": "db",
     "public": true
   }
 }

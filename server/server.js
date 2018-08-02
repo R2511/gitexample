@@ -1,10 +1,48 @@
 'use strict';
-
 var loopback = require('loopback');
 var boot = require('loopback-boot');
-
 var app = module.exports = loopback();
+var bodyParser = require('body-parser');
+var http = require('http');
+var fs = require('fs');
+app.use(function(req, res, next) {
+  if(req.url.indexOf("/api/") >=0) {
+    // console.log(req);
+    if(req.query.access_token) {
+      var token = req.query.access_token;
+      var date = new Date().getTime();
+      app.models.accessToken.find({
+        where: { id: token}
+      },function(err, value) {
+          if (err) {
+              return next(err);
+          } else {
+            var get = value[0].created.getTime();
+            var time = value[0].ttl;
+            if (date - get < 1000 * 60 * 60 * 24){
+              return next();
+            } else{
+              console.log('invalid token');
+              return next('unauthentication');
+            }
 
+          }
+      });
+    } else {
+        var href = req.url;
+        var str = href.substr(href.lastIndexOf('/') + 1);
+        if ( str.indexOf('signUp') >= 0) {
+           return next();
+        } else if (str.indexOf('signin') >= 0) {
+           return next();
+        } else {
+          return next('unauthentication');
+        }
+    }
+  } else {
+    return next();
+  }
+});
 app.start = function() {
   // start the web server
   return app.listen(function() {
@@ -26,4 +64,8 @@ boot(app, __dirname, function(err) {
   // start the server if `$ node server.js`
   if (require.main === module)
     app.start();
+});
+app.all('/a/*', function(req, res, next) {
+    console.log('=====');
+    res.sendFile('index.html', { root: path.resolve(__dirname, '..', 'client') });
 });
