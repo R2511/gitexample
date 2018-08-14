@@ -1,25 +1,38 @@
-<div class="container body">
+<div class="container body"  ng-init="common()" ng-controlller="commonContoller">
   <div class="main_container">
 		<!-- left menu -->
     <div class="pointercss left">
         </div>
 		<!-- /left menu -->
     <!-- /top navigation -->
+    <div class="header">
     <div class="topnav">
-  <div class=logout>
-  <a href="#logout" float:center>Logout</a>
-  <span class="profileimg">
-    <span class="user_status"></span>
+
+      <div class=logout>
+
+  <a href="#logout"float:center>Logout</a>
+  </div>
+  <div class= "name"> {{getName}} &nbsp;
+  </div>
 </div>
+  <!-- <button class = "collapse-btn" id="sidebar-collapse-btn">
+    <i class="fa-fa-bars"></i>
+  </button> -->
 </div>
 <div id="mySidenav" class="sidenav">
+
       <a href="#/profile">Profile</a>
-      <a href="#/manageusers">Manage Users</a>
+      <i class="fa fa-user icon"></i>
+
+      <a ng-if = "getRole == 'teacher'" href="#/managestudents">Manage Students</a>
     </div>
+
 <!-- Use any element to open the sidenav -->
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
 </div>
 <div id="right-content" ui-view></div>
-<!-- page content -->
+ <div id="marks" ng-if="getRole == 'student'" href="#/profile"></div>
+<!-- page content!-->
+
 </div>

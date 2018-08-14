@@ -1,4 +1,7 @@
-<div class="container">
+<div>
+  <body>
+    <center><h2> Login</h2></center>
+  <div class="container">
   <div class="card card-container">
     <form name= "form" class="form-signin" ng-submit="signin(value)" novalidate>
       <div class="form-group text col-lg-12" ng-class="{ 'has-error' : value.username.$invalid && !value.username.$pristine }">
@@ -14,7 +17,9 @@
       </div>
     </div>
       <button class="signin-button" type="submit">Sign in</button>
-      <center> <a  href ng-click="click()" class="clicktosignup">Click to signup</center></a>
+      <center> <a  href ng-click="click()" class="clicktosignup"> Do not have an account! Click to signup</center></a>
     </div>
   </form>
   </div>
+</body>
+</div>

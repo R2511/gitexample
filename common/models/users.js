@@ -126,7 +126,7 @@ users.getusers = function(Role,cb) {
   if (Role=='student'){
     var list = {role:Role}
   } else if(Role=='teacher') {
-        var list ={where: {and:[{role:Role}, {role: 'student'}]}}
+        var list = {role: 'student'}
       }
   users.find({
     where: list

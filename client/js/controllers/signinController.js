@@ -7,6 +7,7 @@ angular.module('app').controller('signinController', ['$state','signinService','
           $localStorage.accessToken = result.status.token;
           $localStorage.role = result.status.role;
           $localStorage.id = result.status.id;
+          $localStorage.Username =result.status.Username;
           console.log(result);
           console.log($localStorage);
           console.log(result.status.token);

@@ -1,17 +1,77 @@
 <body>
+
 	<div ng-app="app" ng-init="profile()"ng-controller="profileController">
-		<center>
-			<table border="3%"style= width="10%"></center>
-				<h1>UserProfile</h1>
-					<tr>
-						<th>Role</th>
-						<th>Username</th>
-						<th>Email</th>
-					</tr>
-					<tr ng-repeat="detail in userdetail.status">
-						<td>{{detail.role}}</td>
-						<td>{{detail.Username}}</td>
-						<td>{{detail.email}}</td>
-					</tr>
-				</table>
-			</body>
+		<div class ="title-block">
+			<h3 id= "title"> Profile </h3>
+		</div>
+		<div class= "profileform">
+			<ng-form name= "form">
+				<div class="col-lg-12">
+					<div class="col-lg-6">
+						<div class="head" style ="text-align:center;" ng-if ="getRole == 'student'">
+							<h4>  Student Details </h4>
+						</div>
+						<div class="head" style ="text-align:center;" ng-if ="getRole == 'teacher'">
+							<h4> User Details </h4>
+							</div>
+								<div class = "userdetails" style= "float:left">
+									<div ng-repeat="detail in userdetail.status">
+										<div class = "col-lg-12">
+											<label class="col-lg-4">Role</label>
+											<div class="col-lg-8">
+													<input type="text"id="Username"placeholder="Role" ng-model="detail.role">
+												</div>
+												</div>
+												<div class = "col-lg-12">
+													<label class="col-lg-4">Username</label>
+												<div class="col-lg-8">
+														<input type="text"id="Username" placeholder="username" ng-model="detail.Username">
+													</div>
+												</div>
+												<div class = "col-lg-12">
+													<label class="col-lg-4">Email</label>
+													<div class="col-lg-8">
+														<input type="text"id="Username" placeholder="Email" ng-model="detail.email">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div classs="col-lg-12">
+										<div class="heading" style ="text-align:center;" ng-if ="getRole == 'student'">
+											<h4> Student Marks</h4>
+										</div>
+										<table class="col-lg-6" rules="all"style = "border: 1px solid black"  "width:50px" ng-if ="getRole == 'student'">
+											<tr>
+												<th style ="background-color:#8073731f;">Subject</th>
+												<th style ="background-color:#8073731f;">Marks</th>
+											</tr>
+											<tr>
+												<td>English</td>
+												<td>{{marklist.english}}</td>
+  									</tr>
+  								<tr>
+    						<td>Maths</td>
+    				<td>{{marklist.maths}}</td>
+  			</tr>
+				<tr>
+					<td>Tamil</td>
+    			<td>{{marklist.tamil}}</td>
+  		</tr>
+			<tr>
+    	<td>Science</td>
+    	<td>{{marklist.social}}</td>
+  	</tr>
+		<tr>
+    	<td>Social</td>
+    	<td>{{marklist.science}}</td>
+  	</tr>
+	</table>
+	</div>
+</div>
+</ng-form>
+</div>
+</div>
+</div>
+</div>
+</body>

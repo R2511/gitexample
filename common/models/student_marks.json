@@ -11,11 +11,23 @@
       "type": "number",
       "required": true
     },
-    "subject": {
-      "type": "string",
+    "english": {
+      "type": "number",
       "required": true
     },
-    "marks": {
+    "maths": {
+      "type": "number",
+      "required": true
+    },
+    "science": {
+      "type": "number",
+      "required": true
+    },
+    "tamil": {
+      "type": "number",
+      "required": true
+    },
+    "social": {
       "type": "number",
       "required": true
     }

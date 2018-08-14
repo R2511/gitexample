@@ -8,9 +8,30 @@ function( $state, $stateParams, profileService, $window, $rootScope, $scope, $lo
     }
     profileService.user(value).then(function(detail){
       console.log(detail);
-      $scope.userdetail=detail;
+      $scope.userdetail = detail;
     }).catch(function(detail){
 
     });
-  }
+  };
+
+
+
+  function getMarkList(){
+    var student ={
+      id:$localStorage.id,
+      accessToken:$localStorage.accessToken
+    }
+    profileService.getMarkList(student).then(function(result){
+      console.log(result);
+      $scope.marklist= result.status[0];
+
+    }).catch(function(result) {
+
+    });
+}
+getMarkList();
+
+
+
+
 }]);

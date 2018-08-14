@@ -1,12 +1,17 @@
 <body>
-  <div ng-app="app" ng-init="manageusers()"ng-controller="manageusersController" >
-<center><h1>Users</h1></center>
-      <table  border="3%"style= width="10%"></center>
+  <div ng-app="app" ng-init="manageusers()"ng-controller="manageusersController">
+    <div class ="manageDetails">
+<center><h1>Student Details</h1></center>
+</div>
+<div class="w3-container">
+<div class="tablestyle">
+      <center><table class="table table-striped" width="50px"></center>
         <thead>
           <tr>
             <th>Role</th>
             <th>Username</th>
             <th>Email</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -14,9 +19,84 @@
             <td> {{data.role}}</td>
             <td>{{data.Username}}</td>
             <td>{{data.email}}</td>
-          </tr>
+            <div classs="edit">
+            <td class="w3-btn w3-ripple"data-toggle="modal" data-target="#myModal"ng-click="getuser(data.id)" style="cursor:pointer;"> &#9998;Edit</td>
+          </div>
+        </tr>
         </tbody>
       </table>
     </div>
+  </div>
+  <div class="modal fade" id="myModal">
+      <form name= "form" class="form-update" ng-submit="update(inputDetails)" novalidate>
 
-</body>
+      <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+          <center><h4 class="modal-title">Student Edit</h4></center>
+        </div>
+        <div class="modal-body">
+          <h4> Student Details</h4>
+          <div class = "col-lg-12">
+            <label class = "col-lg-2">Role</label>
+            <div class = "col-lg-10">
+          <input type = "Role"placeholder = "Role" ng-model="inputDetails.role">
+        </div>
+          </div>
+          <div class="col-lg-12">
+            <label class="col-lg-2"> Username</label>
+            <div class="col-lg-10">
+          <input type ="username" placeholder = "username" ng-model="inputDetails.Username">
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <label class="col-lg-2"> Email</label>
+        <div class="col-lg-10">
+      <input type ="email" placeholder = "Email" ng-model="inputDetails.email">
+    </div>
+  </div>
+          <div style="padding-bottom:10px;">
+          <h4> Student marks</h4>
+            <div class="col-lg-12">
+              <label class="col-lg-2"> English </label>
+              <div class ="col-lg-10">
+        <input type = "number" placeholder = "English"ng-model="inputDetails.english"><br>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <label class="col-lg-2"> Maths </label>
+      <div class ="col-lg-10">
+<input type = "number" placeholder = "Maths"ng-model="inputDetails.maths">
+</div>
+</div>
+
+<div class="col-lg-12">
+  <label class="col-lg-2"> Tamil </label>
+  <div class ="col-lg-10">
+<input type = "number" placeholder = "Tamil"ng-model="inputDetails.tamil">
+</div>
+</div>
+<div class="col-lg-12">
+  <label class="col-lg-2"> Science </label>
+  <div class ="col-lg-10">
+<input type = "number" placeholder = "Science"ng-model="inputDetails.science">
+</div>
+</div>
+<div class="col-lg-12">
+  <label class="col-lg-2"> Social </label>
+  <div class ="col-lg-10">
+<input type = "number" placeholder="Social"ng-model="inputDetails.social">
+</div>
+</div>
+
+          </div>
+          <center><button type="submit">update</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button></center>
+        </div>
+
+  </div>
+  </div>
+  </div>
+  </form>
+  </div>
+  </body>

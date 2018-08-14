@@ -3,12 +3,12 @@
     $stateProvider
         .state('common', {
         templateUrl: '/views/common.html',
+        controller:'commonController',
         abstract : true,
 
       }).state('signup', {
           url: '/signup',
           templateUrl: 'views/signup.html',
-          parent : 'common',
           controller: 'signupController',
 
       }).state('signin', {
@@ -20,6 +20,7 @@
         url: '/profile',
         parent: 'common',
         templateUrl:'views/profile.html',
+        controller:'profileController',
 
       }).state('/getusers',{
          url: '/getusers/:role',
@@ -28,8 +29,8 @@
          controller:'getusersController',
 
 
-      }).state('/manageusers',{
-        url: '/manageusers',
+      }).state('/managestudents',{
+        url: '/managestudents',
         parent:'common',
         templateUrl:'views/manageusers.html',
         controller:'manageusersController',
@@ -39,26 +40,3 @@
 
     $urlRouterProvider.otherwise('signin');
       }]);
-
-app.directive('left-menu', function() {
-    return {
-        restrict: 'AE',
-        templateUrl: 'client/views/common/left_menu.html',
-        replace: 'true',
-        scope: {
-            menu: '=menu',
-            profile: '&profile'
-        },
-    };
-});
-app.directive('top-navigation', function() {
-    return {
-        restrict: 'AE',
-        replace: 'true',
-        templateUrl: 'client/views/common/top_navigation.html',
-        scope: {
-            logout: '&logout',
-            menu: '=menu'
-        },
-    };
-});
