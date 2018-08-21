@@ -35,8 +35,5 @@
         templateUrl:'views/manageusers.html',
         controller:'manageusersController',
       });
-
-
-
-    $urlRouterProvider.otherwise('signin');
+$urlRouterProvider.otherwise('signin');
       }]);
