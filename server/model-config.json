@@ -13,7 +13,7 @@
       "./mixins"
     ]
   },
-  
+
   "accessToken": {
     "dataSource": "db",
     "public": false
