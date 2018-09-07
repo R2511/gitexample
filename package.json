@@ -27,6 +27,7 @@
     "loopback-connector-mysql": "^2.4.0",
     "loopback-context": "^3.3.0",
     "ngstorage": "^0.3.11",
+    "nodejs": "0.0.0",
     "password-hash": "^1.2.2",
     "path": "^0.12.7",
     "salt": "^0.5.5",
